@@ -162,7 +162,7 @@ class RequestHandler {
         this.queue.unshift(item);
         return this.run();
       }
-    } else {
+    } /* else {
       // Handle possible malformed requests
       try {
         const data = await parseResponse(res);
@@ -175,7 +175,7 @@ class RequestHandler {
           new HTTPError(err.message, err.constructor.name, err.status, request.method, request.path)
         );
       }
-    }
+    } */
   }
 }
 
